@@ -1,0 +1,283 @@
+
+        <!doctype html>
+        <html lang="en">
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+            <title>a1</title>
+          </head>
+          <body>
+            <div class="preloader">
+                <div class="preloader__row">
+                  <div class="preloader__item"></div>
+                  <div class="preloader__item"></div>
+                </div>
+              </div>
+            <style>
+            .preloader{position:fixed;left:0;top:0;right:0;bottom:0;background:#fff;z-index:1001}.preloader__row{position:relative;top:50%;left:50%;width:70px;height:70px;margin-top:-35px;margin-left:-35px;text-align:center;animation:preloader-rotate 2s infinite linear}.preloader__item{position:absolute;display:inline-block;top:0;background-color:#337ab7;border-radius:100%;width:35px;height:35px;animation:preloader-bounce 2s infinite ease-in-out}.preloader__item:last-child{top:auto;bottom:0;animation-delay:-1s}@keyframes preloader-rotate{100%{transform:rotate(360deg)}}@keyframes preloader-bounce{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
+            </style>
+            <!-- Modal заявка-->
+            <div class="modal fade" id="send_request" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">
+                        <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M5.646 5.646a.5.5 0 000 .708l8 8a.5.5 0 00.708-.708l-8-8a.5.5 0 00-.708 0z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M14.354 5.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="modal-title text-center" id="">Оставить заявку</h5>
+                    <h6 class="text-center" id="">Мы свяжемся с Вами</h6>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="inputName1" placeholder="Имя">
+                          </div>
+                            <div class="form-group col-md-12">
+                              <input type="email" class="form-control" id="inputEmail1" placeholder="E-mail">
+                            </div>
+                          <div class="form-group col-md-12">
+                            <input type="tel" class="form-control" id="inputPhone1" placeholder="+375(__)__">
+                          </div>
+                          <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="inputComp" placeholder="Коипания">
+                          </div>
+                          <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="inputComm" placeholder="Комментарий">
+                          </div>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="blue_but blue_but_sm">отправить заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal звонок-->
+            <div class="modal fade" id="request_call" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">
+                        <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M5.646 5.646a.5.5 0 000 .708l8 8a.5.5 0 00.708-.708l-8-8a.5.5 0 00-.708 0z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M14.354 5.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="modal-title text-center" id="">Заказать звонок</h5>
+                    <h6 class="text-center" id="">Мы свяжемся с Вами</h6>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <input type="text" class="form-control" id="inputName" placeholder="Имя">
+                        </div>
+                          <div class="form-group col-md-12">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+                          </div>
+                        <div class="form-group col-md-12">
+                          <input type="tel" class="form-control" id="inputPhone" placeholder="+375(__)__">
+                        </div>
+                      </div>
+                      
+                      <div class="text-center">
+                        <button type="submit" class="blue_but blue_but_sm">отправить заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="wrapper">
+            <div class="content">
+               <header>
+                   <div class="header_top" id="up_top">
+                       <div class="container">
+                           <div class="row">
+                               <nav id="menu" class="col-sm-12 navbar navbar-default navbar " role="navigation">
+                                       <div class="navbar-header">
+                                        <a class="navbar-brand" href="#">
+                                          <img data-src="img/logo.jpg">
+                                        </a>
+                                           <button type="button" class="navbar-toggle offcanvas-toggle " data-toggle="offcanvas"
+                                                   data-target="#js-bootstrap-offcanvas">
+                                               <span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                              </span>
+                                           </button>
+                                       </div>
+                                       <div class="navbar-offcanvas navbar-offcanvas-touch navbar-collapse " id="js-bootstrap-offcanvas">
+                                           <ul id="menu" class="nav navbar-nav">
+                                               <li class="d-xl-none d-md-none d-lg-none mebu_name"><p>МЕНЮ</p></li>
+                                               <li class="active"><a class="link_catal" href="#catalog">Каталог</a></li>
+                                               <li><a href="#deskr">Описание товара</a></li>
+                                               <li><a href="#prod">Продукция</a></li>
+                                               <li><a href="#about_us">О компании</a></li>
+                                               <li><a href="#projects">Проекты</a></li>
+                                               <li><a href="#kontact">Контакты</a></li>
+                                               <li class="phone_top">
+                                                <span><a href="tel:+71234567890">+7 (123) 456-78-90</a></span>
+                                                <span><a href="mailto:mailcompany@rinfo.ru">mailcompany@rinfo.ru </a></span>
+                                               </li>
+                                               <li class="phone_boot"><button class="blue_but" data-toggle="modal" data-target="#request_call">Заказать звонок</button></li>
+                                           </ul>                               
+                                       </div>
+                               </nav>
+                           </div>
+                       </div>
+                   </div>
+               </header>
+              <section class="top_banner">
+                <div class="top_banner_img">
+                  <!-- <svg class="svg_img">
+                    <use xlink:href="#img1"></use>
+                  </svg> -->
+                  <img data-src="img/img1.svg" alt="">
+                </div>
+                <div class="top_ban_titl">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 col-lg-8">
+                        <h1>Запорно-регулирующая арматура</h1>
+                      </div>
+                    </div>
+                  </div> 
+                </div> 
+              </section>
+              <section id="catalog" class="catalog_block">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="title">
+                            <h2>Каталог</h2>
+                          </div>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+              </section>
+        
+    </div><!-- content -->
+       <footer class="footer">
+               <div class="footer_bottom">
+                   <div class="container-fluid">
+                       <div class="row">
+                           <div class="col-xs-12 col-sm-4 col-md-5">
+                               <div class="foot_info">
+                                   <p><b>Российская Федерация:</b><br>
+                                    109316,г. Москва, Волгоградский проспект, д. 47, эт. 4, пом. 4, офис В</p>
+                                    <p>
+                                      <b>Отдел продаж:</b><br>
+                                      <a href="tel:+71234567890">+7 (123) 456-78-90</a><br>
+                                       <a href="tel:88005513108">8 (800) 551-31-08</a>
+                                    </p>
+                                    <p>
+                                      <b>E-mail:</b>
+                                      <a href="mailto:mailcompany@rinfo.ru">mailcompany@rinfo.ru </a>
+                                    </p>
+                               </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-8 col-md-7">
+                             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A77726da527f66cbed4e5f6007b293bb80ee873ea9f6e1d04655d8ed4b45ed052&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+       </footer>
+       <div class="up">
+        <a href="#up_top">
+          <svg class="bi bi-arrow-up" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M9.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L10 5.707 7.354 8.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+       </div>
+               
+     </div><!-- wrapper -->
+
+       <style>
+       /*img {
+         opacity: 1;
+         transition: opacity 0.3s;
+       }
+
+       img[data-src] {
+         opacity: 0;
+       }*/
+       </style>
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" async>
+       <link rel="stylesheet" type="text/css" href="css/slick.css" async>
+       <link rel="stylesheet" type="text/css" href="css/slick-theme.css" async>
+       <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css" async>
+       <link rel="stylesheet" type="text/css" href="css/style.css" async>
+       <!-- Optional JavaScript -->
+       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+       <script src="js/bootstrap.offcanvas.min.js" type="text/javascript"></script>
+       <script src="js/slick.js" type="text/javascript"></script>
+       <script src="js/slick-lightbox.js" type="text/javascript"></script>
+       <script src="js/script.js" type="text/javascript"></script>
+       <script src="js/leazy.js" type="text/javascript"></script>
+       <script>
+       // [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+       //   img.setAttribute('src', img.getAttribute('data-src'));
+       //   img.onload = function() {
+       //  img.removeAttribute('data-src');
+       //   };
+       // });
+       $('.tab_catalog_one').slickLightbox();
+       </script>
+       <div class="d-none">
+        
+
+       </div>
+     </body>
+   </html>
+    
